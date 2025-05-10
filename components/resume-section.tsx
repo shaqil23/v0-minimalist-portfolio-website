@@ -5,12 +5,11 @@ import { FileText, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ResumeButton } from "@/components/resume-button"
-import Link from "next/link"
 
 export function ResumeSection() {
   // In a real implementation, these would point to actual files
-  const resumeUrl = "/files/shaqil-azhar-resume.pdf"
-  const resumePreviewUrl = "/resume"
+  const resumeUrl = "/files/john-doe-resume.pdf"
+  const resumePreviewUrl = "/files/john-doe-resume.pdf"
 
   return (
     <Card className="overflow-hidden">
@@ -22,16 +21,16 @@ export function ResumeSection() {
             </div>
             <div>
               <h3 className="text-lg font-semibold">My Resume</h3>
-              <p className="text-sm text-muted-foreground">Updated May 2025</p>
+              <p className="text-sm text-muted-foreground">Updated April 2023</p>
             </div>
           </div>
           <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button variant="outline" size="sm" asChild>
-                <Link href={resumePreviewUrl}>
+                <a href={resumePreviewUrl} target="_blank" rel="noopener noreferrer">
                   <Eye className="mr-2 h-4 w-4" />
                   Preview
-                </Link>
+                </a>
               </Button>
             </motion.div>
             <ResumeButton variant="default" size="sm" />
