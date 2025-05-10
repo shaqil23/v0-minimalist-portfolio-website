@@ -13,8 +13,8 @@ export function MobileNav() {
   const toggleNav = () => setIsOpen(!isOpen)
   const closeNav = () => setIsOpen(false)
 
-  // Using a PDF file
-  const resumeUrl = "/files/shaqil-azhar-resume.pdf"
+  // Using the external PDF URL
+  const resumeUrl = "https://pdf.ac/3WtWjt"
 
   const navItems = [
     { href: "#home", label: "Home" },
@@ -90,7 +90,8 @@ export function MobileNav() {
                   <motion.li whileHover={{ x: 5 }} className="pt-4">
                     <a
                       href={resumeUrl}
-                      download="Shaqil_Azhar_Resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center text-lg font-medium"
                       onClick={closeNav}
                     >

@@ -8,8 +8,7 @@ import { ResumeButton } from "@/components/resume-button"
 import Link from "next/link"
 
 export function ResumeSection() {
-  // Using a PDF file
-  const resumeUrl = "/files/shaqil-azhar-resume.pdf"
+  // Keep the preview URL pointing to the local route
   const resumePreviewUrl = "/resume"
 
   return (
