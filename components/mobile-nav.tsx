@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Menu, X, Download } from "lucide-react"
+import { Menu, X, Download, Github, Linkedin, Mail, Phone } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
@@ -82,6 +82,44 @@ export function MobileNav() {
                   </motion.li>
                 </ul>
               </nav>
+
+              <div className="mt-8 space-y-4">
+                <h3 className="text-lg font-medium">Contact</h3>
+                <div className="space-y-3">
+                  <a
+                    href="mailto:mardhikazhar@gmail.com"
+                    className="flex items-center space-x-2 text-sm hover:text-primary transition-colors"
+                  >
+                    <Mail className="h-4 w-4" />
+                    <span>mardhikazhar@gmail.com</span>
+                  </a>
+                  <a
+                    href="tel:087878181633"
+                    className="flex items-center space-x-2 text-sm hover:text-primary transition-colors"
+                  >
+                    <Phone className="h-4 w-4" />
+                    <span>087878181633</span>
+                  </a>
+                  <a
+                    href="https://github.com/shaqil23"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-sm hover:text-primary transition-colors"
+                  >
+                    <Github className="h-4 w-4" />
+                    <span>github.com/shaqil23</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/shakil-mardhika-azhar-785643190"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-sm hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    <span>linkedin.com/shakil-mardhika-azhar</span>
+                  </a>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}

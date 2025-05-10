@@ -15,6 +15,7 @@ import { ParallaxElement } from "@/components/parallax-element"
 import { ParallaxBackground } from "@/components/parallax-background"
 import { ResumeButton } from "@/components/resume-button"
 import { ResumeSection } from "@/components/resume-section"
+import { ContactForm } from "@/components/contact-form"
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
@@ -69,15 +70,23 @@ export default function Home() {
             <ThemeToggle />
             <div className="hidden md:flex md:items-center md:space-x-3">
               <motion.div whileHover={{ rotate: 5, scale: 1.1 }}>
-                <Button variant="outline" size="icon" className="rounded-full">
-                  <Github className="h-4 w-4" />
-                  <span className="sr-only">GitHub</span>
+                <Button variant="outline" size="icon" className="rounded-full" asChild>
+                  <a href="https://github.com/shaqil23" target="_blank" rel="noopener noreferrer">
+                    <Github className="h-4 w-4" />
+                    <span className="sr-only">GitHub</span>
+                  </a>
                 </Button>
               </motion.div>
               <motion.div whileHover={{ rotate: -5, scale: 1.1 }}>
-                <Button variant="outline" size="icon" className="rounded-full">
-                  <Linkedin className="h-4 w-4" />
-                  <span className="sr-only">LinkedIn</span>
+                <Button variant="outline" size="icon" className="rounded-full" asChild>
+                  <a
+                    href="https://www.linkedin.com/in/shakil-mardhika-azhar-785643190"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    <span className="sr-only">LinkedIn</span>
+                  </a>
                 </Button>
               </motion.div>
             </div>
@@ -294,19 +303,37 @@ export default function Home() {
                   <StaggeredList className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <Mail className="h-5 w-5 text-muted-foreground" />
-                      <span>mardhikazhar@gmail.com</span>
+                      <a href="mailto:mardhikazhar@gmail.com" className="hover:text-primary transition-colors">
+                        mardhikazhar@gmail.com
+                      </a>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="h-5 w-5 text-muted-foreground" />
-                      <span>087878181633</span>
+                      <a href="tel:087878181633" className="hover:text-primary transition-colors">
+                        087878181633
+                      </a>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Github className="h-5 w-5 text-muted-foreground" />
-                      <span>github.com/shaqil23</span>
+                      <a
+                        href="https://github.com/shaqil23"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors"
+                      >
+                        github.com/shaqil23
+                      </a>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Linkedin className="h-5 w-5 text-muted-foreground" />
-                      <span>linkedin.com/shakil</span>
+                      <a
+                        href="https://www.linkedin.com/in/shakil-mardhika-azhar-785643190"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors"
+                      >
+                        linkedin.com/shakil-mardhika-azhar
+                      </a>
                     </div>
                   </StaggeredList>
                   <div className="mt-8">
@@ -322,67 +349,7 @@ export default function Home() {
 
               <ParallaxElement speed={0.3} direction="right" offset={[-30, 30]}>
                 <AnimatedSection delay={0.2}>
-                  <form className="space-y-4">
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium">
-                          Name
-                        </label>
-                        <motion.input
-                          whileFocus={{ scale: 1.01 }}
-                          transition={{ duration: 0.2 }}
-                          id="name"
-                          type="text"
-                          className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
-                          placeholder="Your name"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium">
-                          Email
-                        </label>
-                        <motion.input
-                          whileFocus={{ scale: 1.01 }}
-                          transition={{ duration: 0.2 }}
-                          id="email"
-                          type="email"
-                          className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
-                          placeholder="Your email"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium">
-                        Subject
-                      </label>
-                      <motion.input
-                        whileFocus={{ scale: 1.01 }}
-                        transition={{ duration: 0.2 }}
-                        id="subject"
-                        type="text"
-                        className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
-                        placeholder="Subject"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">
-                        Message
-                      </label>
-                      <motion.textarea
-                        whileFocus={{ scale: 1.01 }}
-                        transition={{ duration: 0.2 }}
-                        id="message"
-                        rows={5}
-                        className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
-                        placeholder="Your message"
-                      ></motion.textarea>
-                    </div>
-                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                      <Button type="submit" className="w-full">
-                        Send Message
-                      </Button>
-                    </motion.div>
-                  </form>
+                  <ContactForm />
                 </AnimatedSection>
               </ParallaxElement>
             </div>

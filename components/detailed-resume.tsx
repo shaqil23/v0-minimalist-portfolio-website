@@ -1,6 +1,7 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Mail, Phone, Github, Linkedin } from "lucide-react"
 
 export function DetailedResume() {
   return (
@@ -10,11 +11,40 @@ export function DetailedResume() {
           {/* Header */}
           <div className="text-center space-y-2 border-b border-border pb-4">
             <h1 className="text-3xl font-bold">Shaqil Mardhika Azhar</h1>
-            <p className="text-muted-foreground">
-              mardhikazhar@gmail.com | 087878181633 | Jakarta, Indonesia
-              <br />
-              github.com/shaqil23 | linkedin.com/shakil
-            </p>
+            <div className="flex flex-wrap justify-center gap-3 text-muted-foreground">
+              <a
+                href="mailto:mardhikazhar@gmail.com"
+                className="flex items-center gap-1 hover:text-primary transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+                <span>mardhikazhar@gmail.com</span>
+              </a>
+              <a href="tel:087878181633" className="flex items-center gap-1 hover:text-primary transition-colors">
+                <Phone className="h-4 w-4" />
+                <span>087878181633</span>
+              </a>
+              <span>Jakarta, Indonesia</span>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 text-muted-foreground">
+              <a
+                href="https://github.com/shaqil23"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 hover:text-primary transition-colors"
+              >
+                <Github className="h-4 w-4" />
+                <span>github.com/shaqil23</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shakil-mardhika-azhar-785643190"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 hover:text-primary transition-colors"
+              >
+                <Linkedin className="h-4 w-4" />
+                <span>linkedin.com/shakil-mardhika-azhar</span>
+              </a>
+            </div>
           </div>
 
           {/* Summary */}
