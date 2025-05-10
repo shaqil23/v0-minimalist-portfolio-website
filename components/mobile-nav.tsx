@@ -54,10 +54,28 @@ export function MobileNav() {
                   </div>
                   <span className="text-xl font-bold">SQL</span>
                 </div>
-                <Button variant="ghost" size="icon" onClick={closeNav}>
-                  <X className="h-5 w-5" />
-                  <span className="sr-only">Close menu</span>
-                </Button>
+                <div className="flex items-center space-x-2">
+                  <a
+                    href="https://github.com/shaqil23"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/shakil-mardhika-azhar-785643190"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                  <Button variant="ghost" size="icon" onClick={closeNav}>
+                    <X className="h-5 w-5" />
+                    <span className="sr-only">Close menu</span>
+                  </Button>
+                </div>
               </div>
 
               <nav className="mt-8">
