@@ -15,7 +15,6 @@ import { ParallaxElement } from "@/components/parallax-element"
 import { ParallaxBackground } from "@/components/parallax-background"
 import { ResumeButton } from "@/components/resume-button"
 import { ResumeSection } from "@/components/resume-section"
-import { ContactForm } from "@/components/contact-form"
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
@@ -285,7 +284,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Section with Parallax */}
+        {/* Contact Section with Parallax - Simplified and Centered */}
         <section id="contact" className="relative py-16 md:py-20 overflow-hidden">
           <div className="container px-4 md:px-6">
             <ParallaxElement speed={0.2} direction="up" offset={[-20, 20]}>
@@ -296,60 +295,50 @@ export default function Home() {
               </AnimatedSection>
             </ParallaxElement>
 
-            <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
-              <ParallaxElement speed={0.3} direction="left" offset={[-30, 30]}>
+            <div className="mx-auto max-w-lg">
+              <ParallaxElement speed={0.3} direction="up" offset={[-30, 30]}>
                 <AnimatedSection delay={0.1}>
-                  <h3 className="mb-4 text-xl font-semibold">Contact Information</h3>
-                  <StaggeredList className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <Mail className="h-5 w-5 text-muted-foreground" />
-                      <a href="mailto:mardhikazhar@gmail.com" className="hover:text-primary transition-colors">
-                        mardhikazhar@gmail.com
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Phone className="h-5 w-5 text-muted-foreground" />
-                      <a href="tel:087878181633" className="hover:text-primary transition-colors">
-                        087878181633
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Github className="h-5 w-5 text-muted-foreground" />
-                      <a
-                        href="https://github.com/shaqil23"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary transition-colors"
-                      >
-                        github.com/shaqil23
-                      </a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Linkedin className="h-5 w-5 text-muted-foreground" />
-                      <a
-                        href="https://www.linkedin.com/in/shakil-mardhika-azhar-785643190"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary transition-colors"
-                      >
-                        linkedin.com/shakil-mardhika-azhar
-                      </a>
-                    </div>
-                  </StaggeredList>
-                  <div className="mt-8">
-                    <h3 className="mb-4 text-xl font-semibold">Let's Connect</h3>
-                    <p className="text-muted-foreground">
-                      I'm currently available for entry-level data analyst positions and internships. If you have data
-                      challenges that need a fresh perspective or are looking for a motivated junior analyst, feel free
-                      to reach out.
-                    </p>
+                  <div className="flex flex-col items-center">
+                    <StaggeredList className="space-y-6 w-full">
+                      <div className="flex items-center justify-center space-x-3">
+                        <Mail className="h-6 w-6 text-primary" />
+                        <a
+                          href="mailto:mardhikazhar@gmail.com"
+                          className="text-lg hover:text-primary transition-colors"
+                        >
+                          mardhikazhar@gmail.com
+                        </a>
+                      </div>
+                      <div className="flex items-center justify-center space-x-3">
+                        <Phone className="h-6 w-6 text-primary" />
+                        <a href="tel:087878181633" className="text-lg hover:text-primary transition-colors">
+                          087878181633
+                        </a>
+                      </div>
+                      <div className="flex items-center justify-center space-x-3">
+                        <Github className="h-6 w-6 text-primary" />
+                        <a
+                          href="https://github.com/shaqil23"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-lg hover:text-primary transition-colors"
+                        >
+                          github.com/shaqil23
+                        </a>
+                      </div>
+                      <div className="flex items-center justify-center space-x-3">
+                        <Linkedin className="h-6 w-6 text-primary" />
+                        <a
+                          href="https://www.linkedin.com/in/shakil-mardhika-azhar-785643190"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-lg hover:text-primary transition-colors"
+                        >
+                          linkedin.com/shakil-mardhika-azhar
+                        </a>
+                      </div>
+                    </StaggeredList>
                   </div>
-                </AnimatedSection>
-              </ParallaxElement>
-
-              <ParallaxElement speed={0.3} direction="right" offset={[-30, 30]}>
-                <AnimatedSection delay={0.2}>
-                  <ContactForm />
                 </AnimatedSection>
               </ParallaxElement>
             </div>
@@ -357,7 +346,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
+      {/* Footer with updated text */}
       <footer className="border-t border-border bg-background py-8">
         <div className="container text-center">
           <motion.p
@@ -366,7 +355,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="text-sm text-muted-foreground"
           >
-            © {new Date().getFullYear()} Shaqil Mardhika Azhar. All rights reserved.
+            too talented to ignore hire me :)
           </motion.p>
         </div>
       </footer>
