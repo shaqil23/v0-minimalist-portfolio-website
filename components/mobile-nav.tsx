@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Menu, X, Download } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -12,14 +13,15 @@ export function MobileNav() {
   const toggleNav = () => setIsOpen(!isOpen)
   const closeNav = () => setIsOpen(false)
 
-  // In a real implementation, this would point to an actual file
-  const resumeUrl = "/files/john-doe-resume.pdf"
+  // Using a text file that will definitely be available
+  const resumeUrl = "/files/shaqil-azhar-resume.txt"
 
   const navItems = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
+    { href: "/resume", label: "Resume" },
   ]
 
   return (
@@ -46,7 +48,12 @@ export function MobileNav() {
               className="fixed right-0 top-0 h-full w-3/4 bg-background p-6 shadow-lg"
             >
               <div className="flex items-center justify-between">
-                <span className="text-xl font-bold">JD</span>
+                <div className="flex items-center space-x-2">
+                  <div className="h-8 w-8 overflow-hidden rounded-full">
+                    <Image src="/images/profile.jpeg" alt="Profile" width={32} height={32} className="object-cover" />
+                  </div>
+                  <span className="text-xl font-bold">SQL</span>
+                </div>
                 <Button variant="ghost" size="icon" onClick={closeNav}>
                   <X className="h-5 w-5" />
                   <span className="sr-only">Close menu</span>
@@ -65,7 +72,7 @@ export function MobileNav() {
                   <motion.li whileHover={{ x: 5 }} className="pt-4">
                     <a
                       href={resumeUrl}
-                      download="John_Doe_Resume.pdf"
+                      download="Shaqil_Azhar_Resume.txt"
                       className="flex items-center text-lg font-medium"
                       onClick={closeNav}
                     >

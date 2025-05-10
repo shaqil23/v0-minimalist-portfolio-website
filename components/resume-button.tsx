@@ -11,13 +11,13 @@ interface ResumeButtonProps {
 }
 
 export function ResumeButton({ variant = "outline", size = "default", className = "" }: ResumeButtonProps) {
-  // In a real implementation, this would point to an actual file
-  const resumeUrl = "/files/john-doe-resume.pdf"
+  // Using a text file that will definitely be available
+  const resumeUrl = "/files/shaqil-azhar-resume.txt"
 
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <Button variant={variant} size={size} className={className} asChild>
-        <a href={resumeUrl} download="John_Doe_Resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a href={resumeUrl} download="Shaqil_Azhar_Resume.txt" target="_blank" rel="noopener noreferrer">
           <Download className="mr-2 h-4 w-4" />
           Download Resume
         </a>

@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Github, Mail, Linkedin } from "lucide-react"
+import { Github, Mail, Linkedin, Phone } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
@@ -34,7 +34,7 @@ export default function Home() {
       >
         <div className="container flex h-16 items-center justify-between">
           <motion.div whileHover={{ scale: 1.05 }} className="text-xl font-bold">
-            JD
+            SQL
           </motion.div>
           <nav className="hidden md:block">
             <ul className="flex space-x-8">
@@ -56,6 +56,11 @@ export default function Home() {
               <motion.li whileHover={{ y: -2 }}>
                 <a href="#contact" className="text-sm font-medium hover:text-primary">
                   Contact
+                </a>
+              </motion.li>
+              <motion.li whileHover={{ y: -2 }}>
+                <a href="/resume" className="text-sm font-medium hover:text-primary">
+                  Resume
                 </a>
               </motion.li>
             </ul>
@@ -98,11 +103,11 @@ export default function Home() {
                 className="mb-8 overflow-hidden rounded-full border-4 border-border p-1"
               >
                 <Image
-                  src="/placeholder.svg?height=150&width=150"
+                  src="/images/profile.jpeg"
                   alt="Profile"
                   width={150}
                   height={150}
-                  className="rounded-full"
+                  className="rounded-full object-cover"
                   priority
                 />
               </motion.div>
@@ -115,7 +120,7 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
               >
-                John Doe
+                Shaqil Mardhika Azhar
               </motion.h1>
             </ParallaxElement>
 
@@ -126,7 +131,7 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
                 className="mb-6 text-lg text-muted-foreground sm:text-xl md:text-2xl"
               >
-                Data Analyst & Visualization Specialist
+                Junior Data Analyst
               </motion.h2>
             </ParallaxElement>
 
@@ -137,8 +142,8 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
                 className="mx-auto mb-8 max-w-lg px-4 text-muted-foreground"
               >
-                I transform complex data into actionable insights through advanced analytics and compelling
-                visualizations that drive strategic decision-making.
+                As an early-career data analyst, I support data-driven decisions by analyzing datasets and creating
+                clear visualizations that turn information into useful insights.
               </motion.p>
             </ParallaxElement>
 
@@ -181,14 +186,14 @@ export default function Home() {
                 <AnimatedSection delay={0.1}>
                   <h3 className="mb-4 text-xl font-semibold">My Background</h3>
                   <p className="mb-4 text-muted-foreground">
-                    I'm a data analyst with 5+ years of experience in transforming raw data into meaningful insights. I
-                    specialize in statistical analysis, data visualization, and predictive modeling, with expertise in
-                    SQL, Python, and business intelligence tools.
+                    I'm a data analyst in the making with a deep curiosity for uncovering insights through data. As an
+                    Informatics Engineering student, I've built a strong foundation in analytics using Python, SQL, and
+                    Excel—and I'm constantly pushing myself to learn more.
                   </p>
                   <p className="text-muted-foreground">
-                    Previously, I worked at Analytics Company X where I led data initiatives that resulted in a 30%
-                    improvement in operational efficiency and helped identify new market opportunities worth $2M in
-                    annual revenue.
+                    Driven by a passion for solving real-world problems, I've worked on academic and personal projects
+                    that involve cleaning messy data, building dashboards, and turning numbers into stories. I'm eager
+                    to grow, contribute, and make an impact through data.
                   </p>
                 </AnimatedSection>
               </ParallaxElement>
@@ -199,19 +204,19 @@ export default function Home() {
                   <StaggeredList className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div className="rounded-md border border-border p-3">
                       <p className="font-medium">Data Analysis</p>
-                      <p className="text-sm text-muted-foreground">SQL, Python, R, Excel</p>
+                      <p className="text-sm text-muted-foreground">SQL, Python, Excel</p>
                     </div>
                     <div className="rounded-md border border-border p-3">
                       <p className="font-medium">Visualization</p>
-                      <p className="text-sm text-muted-foreground">Tableau, Power BI, D3.js</p>
+                      <p className="text-sm text-muted-foreground">Tableau, Power BI</p>
                     </div>
                     <div className="rounded-md border border-border p-3">
                       <p className="font-medium">Statistics</p>
-                      <p className="text-sm text-muted-foreground">Regression, Hypothesis Testing, ML</p>
+                      <p className="text-sm text-muted-foreground">Regression, K-Means, ML</p>
                     </div>
                     <div className="rounded-md border border-border p-3">
                       <p className="font-medium">Tools</p>
-                      <p className="text-sm text-muted-foreground">Git, Jupyter, AWS, GCP</p>
+                      <p className="text-sm text-muted-foreground">Git, Jupyter, Google Colab</p>
                     </div>
                   </StaggeredList>
                 </AnimatedSection>
@@ -289,22 +294,27 @@ export default function Home() {
                   <StaggeredList className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <Mail className="h-5 w-5 text-muted-foreground" />
-                      <span>hello@johndoe.com</span>
+                      <span>mardhikazhar@gmail.com</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Phone className="h-5 w-5 text-muted-foreground" />
+                      <span>087878181633</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Github className="h-5 w-5 text-muted-foreground" />
-                      <span>github.com/johndoe</span>
+                      <span>github.com/shaqil23</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Linkedin className="h-5 w-5 text-muted-foreground" />
-                      <span>linkedin.com/in/johndoe</span>
+                      <span>linkedin.com/shakil</span>
                     </div>
                   </StaggeredList>
                   <div className="mt-8">
                     <h3 className="mb-4 text-xl font-semibold">Let's Connect</h3>
                     <p className="text-muted-foreground">
-                      I'm currently available for freelance data analysis projects and open to new opportunities. If you
-                      have data challenges that need expert analysis or visualization, feel free to reach out.
+                      I'm currently available for entry-level data analyst positions and internships. If you have data
+                      challenges that need a fresh perspective or are looking for a motivated junior analyst, feel free
+                      to reach out.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -389,7 +399,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="text-sm text-muted-foreground"
           >
-            © {new Date().getFullYear()} John Doe. All rights reserved.
+            © {new Date().getFullYear()} Shaqil Mardhika Azhar. All rights reserved.
           </motion.p>
         </div>
       </footer>
