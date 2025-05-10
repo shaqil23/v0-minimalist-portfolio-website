@@ -8,8 +8,8 @@ import { ResumeButton } from "@/components/resume-button"
 import Link from "next/link"
 
 export function ResumeSection() {
-  // Using a text file that will definitely be available
-  const resumeUrl = "/files/shaqil-azhar-resume.txt"
+  // Using a PDF file
+  const resumeUrl = "/files/shaqil-azhar-resume.pdf"
   const resumePreviewUrl = "/resume"
 
   return (

@@ -14,7 +14,7 @@ export default function ResumePage() {
           </Link>
         </Button>
         <Button asChild>
-          <a href="/files/shaqil-azhar-resume.txt" download="Shaqil_Azhar_Resume.txt">
+          <a href="/files/shaqil-azhar-resume.pdf" download="Shaqil_Azhar_Resume.pdf">
             <Download className="mr-2 h-4 w-4" />
             Download Resume
           </a>
