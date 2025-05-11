@@ -242,7 +242,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects Section with Parallax */}
+        {/* Projects Section with Parallax - UPDATED with real projects and images */}
         <section id="projects" className="relative bg-muted/30 py-16 md:py-20 overflow-hidden">
           <div className="container px-4 md:px-6">
             <ParallaxElement speed={0.2} direction="up" offset={[-20, 20]}>
@@ -256,28 +256,31 @@ export default function Home() {
             <StaggeredList className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <ParallaxElement speed={0.3} direction="up" offset={[-30, 30]}>
                 <ProjectCard
-                  title="Sales Forecasting Model"
-                  description="Developed a predictive model using time series analysis that improved forecast accuracy by 35%, enabling better inventory management and reducing costs."
-                  tags={["Python", "Prophet", "Pandas", "Scikit-learn"]}
-                  imageUrl="/placeholder.svg?height=400&width=600"
+                  title="Sentiment Analysis of 'OXYGENIDHOME' on X"
+                  description="Sentiment analysis on the keyword 'oxygenidhome' from X (Twitter) using the Random Forest algorithm. Includes data collection, preprocessing, classification, and visualization of results."
+                  tags={["Python", "Random Forest", "NLP", "Twitter API"]}
+                  imageUrl="/images/sentiment-analysis.jpeg"
+                  link="https://github.com/shaqil23/oxygenidhome-twitter-analysis.git"
                 />
               </ParallaxElement>
 
               <ParallaxElement speed={0.4} direction="up" offset={[-40, 40]}>
                 <ProjectCard
-                  title="Customer Segmentation Dashboard"
-                  description="Created an interactive dashboard that visualized customer segments based on purchasing behavior, demographics, and engagement metrics."
-                  tags={["Tableau", "SQL", "K-means Clustering"]}
-                  imageUrl="/placeholder.svg?height=400&width=600"
+                  title="Consumer Sentiment Analysis of Wi-Fi Providers"
+                  description="A sentiment analysis project focused on consumer opinions toward five WiFi providers in Indonesia during 2024, based on data collected from Twitter (X) using text mining and Naive Bayes algorithm."
+                  tags={["Naive Bayes", "Text Mining", "Python", "Data Visualization"]}
+                  imageUrl="/images/wifi-sentiment-analysis.webp"
+                  link="https://github.com/shaqil23/sentiment-analysis-internet-provider-2024.git"
                 />
               </ParallaxElement>
 
               <ParallaxElement speed={0.5} direction="up" offset={[-50, 50]}>
                 <ProjectCard
-                  title="Marketing ROI Analysis"
-                  description="Analyzed multi-channel marketing data to optimize campaign spending, resulting in a 25% increase in ROI and improved attribution modeling."
-                  tags={["R", "Google Analytics", "Statistical Modeling"]}
-                  imageUrl="/placeholder.svg?height=400&width=600"
+                  title="SelfCare Oxygen ID Reviews Analysis"
+                  description="This project analyzes user reviews for the SelfCare OXYGEN ID app from the Google Play Store using the Support Vector Machine (SVM) algorithm to classify reviews into positive, negative, or neutral sentiments."
+                  tags={["SVM", "Python", "NLP", "Google Play Store"]}
+                  imageUrl="/images/app-review-analysis.jpeg"
+                  link="https://github.com/shaqil23/sentiment-analysis-oxygenid-svm.git"
                 />
               </ParallaxElement>
             </StaggeredList>
