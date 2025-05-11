@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Github, Mail, Linkedin, Phone } from "lucide-react"
+import { Github, Mail, Linkedin } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
@@ -310,12 +310,6 @@ export default function Home() {
                           className="text-lg hover:text-primary transition-colors"
                         >
                           mardhikazhar@gmail.com
-                        </a>
-                      </div>
-                      <div className="flex items-center justify-center space-x-3">
-                        <Phone className="h-6 w-6 text-primary" />
-                        <a href="tel:087878181633" className="text-lg hover:text-primary transition-colors">
-                          087878181633
                         </a>
                       </div>
                       <div className="flex items-center justify-center space-x-3">
